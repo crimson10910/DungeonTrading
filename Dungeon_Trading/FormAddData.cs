@@ -37,12 +37,15 @@ namespace Dungeon_Trading
             {
                 return;
             }
+            openFileDialog.InitialDirectory = Environment.CurrentDirectory;
             openFileDialog.Filter = "Файл с разделителями \";\" (*.csv)|*.csv";
             if (openFileDialog.ShowDialog() == DialogResult.Cancel)
             {
+
                 return;
             }
             Functions f = new Functions();
+
             filename = openFileDialog.FileName;
 
             Button b = (Button)sender;

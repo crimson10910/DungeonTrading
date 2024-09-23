@@ -55,6 +55,7 @@
             this.textBoxBuy = new System.Windows.Forms.TextBox();
             this.labelOpponent = new System.Windows.Forms.Label();
             this.comboBoxOpponent = new System.Windows.Forms.ComboBox();
+            this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -69,31 +70,33 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.добавитьДанныеToolStripMenuItem,
             this.инструкцияToolStripMenuItem,
-            this.оПрограммеToolStripMenuItem});
+            this.оПрограммеToolStripMenuItem,
+            this.редактироватьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1400, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1227, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // добавитьДанныеToolStripMenuItem
             // 
             this.добавитьДанныеToolStripMenuItem.Name = "добавитьДанныеToolStripMenuItem";
-            this.добавитьДанныеToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
+            this.добавитьДанныеToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
             this.добавитьДанныеToolStripMenuItem.Text = "Добавить данные";
             this.добавитьДанныеToolStripMenuItem.Click += new System.EventHandler(this.добавитьДанныеToolStripMenuItem_Click);
             // 
             // инструкцияToolStripMenuItem
             // 
             this.инструкцияToolStripMenuItem.Name = "инструкцияToolStripMenuItem";
-            this.инструкцияToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
+            this.инструкцияToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.инструкцияToolStripMenuItem.Text = "Инструкция";
             this.инструкцияToolStripMenuItem.Click += new System.EventHandler(this.инструкцияToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -101,9 +104,10 @@
             // 
             this.comboBoxTown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTown.FormattingEnabled = true;
-            this.comboBoxTown.Location = new System.Drawing.Point(12, 136);
+            this.comboBoxTown.Location = new System.Drawing.Point(10, 102);
+            this.comboBoxTown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxTown.Name = "comboBoxTown";
-            this.comboBoxTown.Size = new System.Drawing.Size(172, 28);
+            this.comboBoxTown.Size = new System.Drawing.Size(151, 23);
             this.comboBoxTown.TabIndex = 3;
             this.comboBoxTown.SelectedIndexChanged += new System.EventHandler(this.buttonReload_Click);
             // 
@@ -123,11 +127,12 @@
             this.CountTake,
             this.SellSum});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dataGridView1.Location = new System.Drawing.Point(198, 28);
+            this.dataGridView1.Location = new System.Drawing.Point(175, 24);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1202, 546);
+            this.dataGridView1.Size = new System.Drawing.Size(1052, 406);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             // 
@@ -145,7 +150,7 @@
             this.Qprice.MinimumWidth = 6;
             this.Qprice.Name = "Qprice";
             this.Qprice.ReadOnly = true;
-            this.Qprice.Width = 75;
+            this.Qprice.Width = 55;
             // 
             // Column1
             // 
@@ -153,7 +158,7 @@
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
+            this.Column1.Width = 40;
             // 
             // Price
             // 
@@ -161,7 +166,7 @@
             this.Price.MinimumWidth = 6;
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
-            this.Price.Width = 155;
+            this.Price.Width = 125;
             // 
             // Price2
             // 
@@ -169,7 +174,7 @@
             this.Price2.MinimumWidth = 6;
             this.Price2.Name = "Price2";
             this.Price2.ReadOnly = true;
-            this.Price2.Width = 155;
+            this.Price2.Width = 115;
             // 
             // BayColumn
             // 
@@ -177,7 +182,7 @@
             this.BayColumn.MinimumWidth = 6;
             this.BayColumn.Name = "BayColumn";
             this.BayColumn.ReadOnly = true;
-            this.BayColumn.Width = 155;
+            this.BayColumn.Width = 115;
             // 
             // CountTake
             // 
@@ -197,18 +202,18 @@
             // labelTown
             // 
             this.labelTown.AutoSize = true;
-            this.labelTown.Location = new System.Drawing.Point(12, 113);
+            this.labelTown.Location = new System.Drawing.Point(10, 85);
             this.labelTown.Name = "labelTown";
-            this.labelTown.Size = new System.Drawing.Size(89, 20);
+            this.labelTown.Size = new System.Drawing.Size(71, 15);
             this.labelTown.TabIndex = 5;
             this.labelTown.Text = "Поселение:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 173);
+            this.label1.Location = new System.Drawing.Point(10, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 20);
+            this.label1.Size = new System.Drawing.Size(89, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "Мод. харизмы:";
             // 
@@ -233,17 +238,19 @@
             "+8",
             "+9",
             "+10"});
-            this.comboBoxCharm.Location = new System.Drawing.Point(129, 170);
+            this.comboBoxCharm.Location = new System.Drawing.Point(113, 128);
+            this.comboBoxCharm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxCharm.Name = "comboBoxCharm";
-            this.comboBoxCharm.Size = new System.Drawing.Size(55, 28);
+            this.comboBoxCharm.Size = new System.Drawing.Size(49, 23);
             this.comboBoxCharm.TabIndex = 7;
             this.comboBoxCharm.SelectedIndexChanged += new System.EventHandler(this.buttonReload_Click);
             // 
             // buttonReload
             // 
-            this.buttonReload.Location = new System.Drawing.Point(12, 66);
+            this.buttonReload.Location = new System.Drawing.Point(10, 50);
+            this.buttonReload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonReload.Name = "buttonReload";
-            this.buttonReload.Size = new System.Drawing.Size(167, 29);
+            this.buttonReload.Size = new System.Drawing.Size(146, 22);
             this.buttonReload.TabIndex = 8;
             this.buttonReload.Text = "Перезагрузить";
             this.buttonReload.UseVisualStyleBackColor = true;
@@ -251,9 +258,10 @@
             // 
             // buttonShow
             // 
-            this.buttonShow.Location = new System.Drawing.Point(12, 31);
+            this.buttonShow.Location = new System.Drawing.Point(10, 23);
+            this.buttonShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonShow.Name = "buttonShow";
-            this.buttonShow.Size = new System.Drawing.Size(167, 29);
+            this.buttonShow.Size = new System.Drawing.Size(146, 22);
             this.buttonShow.TabIndex = 9;
             this.buttonShow.Text = "Отобразить";
             this.buttonShow.UseVisualStyleBackColor = true;
@@ -261,9 +269,10 @@
             // 
             // buttonGetSum
             // 
-            this.buttonGetSum.Location = new System.Drawing.Point(7, 374);
+            this.buttonGetSum.Location = new System.Drawing.Point(6, 280);
+            this.buttonGetSum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonGetSum.Name = "buttonGetSum";
-            this.buttonGetSum.Size = new System.Drawing.Size(172, 29);
+            this.buttonGetSum.Size = new System.Drawing.Size(150, 22);
             this.buttonGetSum.TabIndex = 10;
             this.buttonGetSum.Text = "Рассчитать сумму";
             this.buttonGetSum.UseVisualStyleBackColor = true;
@@ -272,43 +281,45 @@
             // labelSell
             // 
             this.labelSell.AutoSize = true;
-            this.labelSell.Location = new System.Drawing.Point(7, 406);
+            this.labelSell.Location = new System.Drawing.Point(6, 304);
             this.labelSell.Name = "labelSell";
-            this.labelSell.Size = new System.Drawing.Size(76, 20);
+            this.labelSell.Size = new System.Drawing.Size(60, 15);
             this.labelSell.TabIndex = 11;
             this.labelSell.Text = "Продажа:";
             // 
             // labelBuy
             // 
             this.labelBuy.AutoSize = true;
-            this.labelBuy.Location = new System.Drawing.Point(7, 459);
+            this.labelBuy.Location = new System.Drawing.Point(6, 344);
             this.labelBuy.Name = "labelBuy";
-            this.labelBuy.Size = new System.Drawing.Size(76, 20);
+            this.labelBuy.Size = new System.Drawing.Size(60, 15);
             this.labelBuy.TabIndex = 12;
             this.labelBuy.Text = "Продажа:";
             // 
             // textBoxSell
             // 
-            this.textBoxSell.Location = new System.Drawing.Point(7, 429);
+            this.textBoxSell.Location = new System.Drawing.Point(6, 322);
+            this.textBoxSell.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSell.Name = "textBoxSell";
             this.textBoxSell.ReadOnly = true;
-            this.textBoxSell.Size = new System.Drawing.Size(172, 27);
+            this.textBoxSell.Size = new System.Drawing.Size(151, 23);
             this.textBoxSell.TabIndex = 13;
             // 
             // textBoxBuy
             // 
-            this.textBoxBuy.Location = new System.Drawing.Point(7, 482);
+            this.textBoxBuy.Location = new System.Drawing.Point(6, 362);
+            this.textBoxBuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuy.Name = "textBoxBuy";
             this.textBoxBuy.ReadOnly = true;
-            this.textBoxBuy.Size = new System.Drawing.Size(172, 27);
+            this.textBoxBuy.Size = new System.Drawing.Size(151, 23);
             this.textBoxBuy.TabIndex = 14;
             // 
             // labelOpponent
             // 
             this.labelOpponent.AutoSize = true;
-            this.labelOpponent.Location = new System.Drawing.Point(12, 207);
+            this.labelOpponent.Location = new System.Drawing.Point(10, 155);
             this.labelOpponent.Name = "labelOpponent";
-            this.labelOpponent.Size = new System.Drawing.Size(82, 20);
+            this.labelOpponent.Size = new System.Drawing.Size(65, 15);
             this.labelOpponent.TabIndex = 15;
             this.labelOpponent.Text = "Оппонент:";
             // 
@@ -316,16 +327,24 @@
             // 
             this.comboBoxOpponent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOpponent.FormattingEnabled = true;
-            this.comboBoxOpponent.Location = new System.Drawing.Point(12, 230);
+            this.comboBoxOpponent.Location = new System.Drawing.Point(10, 172);
+            this.comboBoxOpponent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxOpponent.Name = "comboBoxOpponent";
-            this.comboBoxOpponent.Size = new System.Drawing.Size(172, 28);
+            this.comboBoxOpponent.Size = new System.Drawing.Size(151, 23);
             this.comboBoxOpponent.TabIndex = 16;
+            // 
+            // редактироватьToolStripMenuItem
+            // 
+            this.редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
+            this.редактироватьToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.редактироватьToolStripMenuItem.Text = "Редактировать";
+            this.редактироватьToolStripMenuItem.Click += new System.EventHandler(this.редактироватьToolStripMenuItem_Click);
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 574);
+            this.ClientSize = new System.Drawing.Size(1227, 430);
             this.Controls.Add(this.comboBoxOpponent);
             this.Controls.Add(this.labelOpponent);
             this.Controls.Add(this.textBoxBuy);
@@ -342,8 +361,9 @@
             this.Controls.Add(this.comboBoxTown);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(1418, 1900);
-            this.MinimumSize = new System.Drawing.Size(1418, 0);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(1243, 1435);
+            this.MinimumSize = new System.Drawing.Size(1243, 39);
             this.Name = "FormMain";
             this.Text = "FormMain";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -373,6 +393,8 @@
         private TextBox textBoxSell;
         private TextBox textBoxBuy;
         private ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private Label labelOpponent;
+        private ComboBox comboBoxOpponent;
         private DataGridViewTextBoxColumn GoodName;
         private DataGridViewTextBoxColumn Qprice;
         private DataGridViewTextBoxColumn Column1;
@@ -381,7 +403,6 @@
         private DataGridViewTextBoxColumn BayColumn;
         private DataGridViewTextBoxColumn CountTake;
         private DataGridViewTextBoxColumn SellSum;
-        private Label labelOpponent;
-        private ComboBox comboBoxOpponent;
+        private ToolStripMenuItem редактироватьToolStripMenuItem;
     }
 }

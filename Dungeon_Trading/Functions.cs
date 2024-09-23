@@ -160,8 +160,6 @@ namespace Dungeon_Trading
             {
                 sum += copper;
             }
-
-
             return sum;
         }
         public int GetC(int index)
@@ -223,9 +221,11 @@ namespace Dungeon_Trading
             {
                 case 1:
                     Settings.Default.TownC = C;
+                    Settings.Default.Save();
                     break;
                 case 2:
                     Settings.Default.GoodsC = C;
+                    Settings.Default.Save();
                     break;
                 default:
                     break;

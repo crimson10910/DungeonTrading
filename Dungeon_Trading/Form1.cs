@@ -19,7 +19,7 @@ namespace Dungeon_Trading
         int[] finalBuyPrice;
         int[] GoodsCount;
 
-        int selectedTown;
+        int selectedTown = 0;
 
         public bool reload = false;
         MatchCollection matches; // Количество столбцов
@@ -61,7 +61,7 @@ namespace Dungeon_Trading
             string[] bufGood = new string[Settings.Default.GoodsC];
             string[] bufTown = new string[Settings.Default.TownC];
             int g = Settings.Default.TownC;
-            for (int i = 0; i < Settings.Default.TownC; i++)
+            for (int i = 0; i < Settings.Default.TownR; i++)
             {
                 bufTown[i] = towns[selectedTown, i];
             }
@@ -78,7 +78,7 @@ namespace Dungeon_Trading
                 priceBuy = Functions.GetNewPriceSell(bufTown, bufGood, f.GetCharm(comboBoxCharm.SelectedIndex), false);
                 dataGridView1.Rows[i].Cells[0].Value = goods[i, 0].ToString();  // Name
                 dataGridView1.Rows[i].Cells[1].Value = goods[i, 2].ToString();  // massa
-                dataGridView1.Rows[i].Cells[2].Value = (Convert.ToDouble(priceSell) / (Convert.ToDouble(goods[i, 2])) * 100).ToString("F0") + "%";
+                dataGridView1.Rows[i].Cells[2].Value = (Convert.ToDouble(priceSell) / (Convert.ToDouble(priceBuy)) * 100).ToString("F0") + "%";
                 dataGridView1.Rows[i].Cells[3].Value = f.FromPriceToCoin(goods[i, 2]).ToString();
                 dataGridView1.Rows[i].Cells[4].Value = f.FromPriceToCoin(priceSell.ToString()).ToString();
                 dataGridView1.Rows[i].Cells[5].Value = f.FromPriceToCoin(priceBuy.ToString()).ToString();
@@ -131,6 +131,7 @@ namespace Dungeon_Trading
             Settings.Default.TownC = f.GetC(1);
             Settings.Default.GoodsR = f.GetR(2);
             Settings.Default.GoodsC = f.GetR(2);
+            Settings.Default.Save();
             f.DrowData(1);
             f.DrowData(2);
             if (reload)
@@ -227,6 +228,12 @@ namespace Dungeon_Trading
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             Rererere();
+        }
+
+        private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditTables editTables = new EditTables();
+            editTables.Show();
         }
     }
 }
